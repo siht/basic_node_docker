@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: mongo
+    volumes:
+      - data:/data/db
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      PORT: $PORT
+      MONGO: $MONGO
+    depends_on:
+      - db
+
+volumes:
+  data:
