@@ -5,10 +5,10 @@ services:
     image: mongo:4.0.3
     volumes:
       - data:/data/db
-  app:
+  api:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: api.Dockerfile
     ports:
       - 3000:$PORT
     environment:
