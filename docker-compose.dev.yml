@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     volumes:
-      - ./src:/app
+      - ./src/node_api_test:/app
     entrypoint:
       - "npm"
       - "start"
