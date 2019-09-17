@@ -10,12 +10,20 @@ services:
       context: .
       dockerfile: api.Dockerfile
     ports:
-      - 3000:$PORT
+      - 3000:$API_PORT
     environment:
-      PORT: $PORT
+      PORT: $API_PORT
       MONGO: $MONGO
     depends_on:
       - db
+  frontend_app:
+    build:
+      context: .
+      dockerfile: front.Dockerfile
+    ports:
+      - 8000:$FRONT_PORT
+    environment:
+      PORT: $FRONT_PORT
 
 volumes:
   data:

@@ -7,3 +7,9 @@ services:
     entrypoint:
       - "npm"
       - "start"
+  frontend_app:
+    volumes:
+      - ./src/node_simple_static_server:/app
+    entrypoint:
+      - "npm"
+      - "start"
