@@ -30,7 +30,7 @@ docker run --rm -ti -v "$PWD:/app" -w "/app" --user "$(id -u):$(id -g)" node:10.
 
 first you need a .env file with these variables set
 
-API_PORT, MONGO, FRONT_PORT
+API_PORT, MONGO, FRONT_PORT, API_URL, IMGUR_CLIENT_ID, IMGUR_URL
 
 ### development
 
