@@ -1,9 +1,17 @@
 version: '3'
 
 services:
-  app:
+  api:
     volumes:
-      - ./src:/app
+      - ./src/node_api_test:/app
     entrypoint:
       - "npm"
-      - "start"
+      - "run"
+      - "dev"
+  frontend_app:
+    volumes:
+      - ./src/node_simple_static_server:/app
+    entrypoint:
+      - "npm"
+      - "run"
+      - "dev"
