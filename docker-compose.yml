@@ -14,6 +14,8 @@ services:
     environment:
       PORT: $API_PORT
       MONGO: $MONGO
+      IMGUR_URL: $IMGUR_URL
+      IMGUR_CLIENT_ID: $IMGUR_CLIENT_ID
     depends_on:
       - db
   frontend_app:
@@ -25,8 +27,6 @@ services:
     environment:
       PORT: $FRONT_PORT
       API_URL: $API_URL
-      IMGUR_URL: $IMGUR_URL
-      IMGUR_CLIENT_ID: $IMGUR_CLIENT_ID
 
 volumes:
   data:
